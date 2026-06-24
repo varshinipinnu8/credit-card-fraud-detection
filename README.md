@@ -51,6 +51,10 @@ pip install pandas numpy matplotlib scikit-learn imbalanced-learn
 ```bash
 python credit_card_fraud.py
 ```
+## Live Demo
+
+🚀 Streamlit App:
+https://credit-card-fraud-detection-8povtemjeawfuvgqmjdka6.streamlit.app
 
 ## Future Improvements
 - Hyperparameter Tuning
