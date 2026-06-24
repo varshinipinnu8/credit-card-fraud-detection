@@ -26,7 +26,7 @@ from sklearn.metrics import accuracy_score, precision_score, confusion_matrix, r
 
 # Load the csv file
 
-dataframe = pd.read_csv("./Desktop/DataFlair/credit_card_fraud_detection/creditcard.csv")
+dataframe = pd.read_csv("creditcard.csv")
 dataframe.head()
 
 
@@ -276,13 +276,18 @@ rf_resampled.fit(train_X, train_Y)
 predictions_resampled = rf_resampled.predict(test_X)
 random_forest_score_resampled = rf_resampled.score(test_X, test_Y) * 100
 
+import joblib
+
+joblib.dump(rf_resampled, "fraud_model.pkl")
+print("Model saved successfully!")
+
 
 # In[36]:
 
 
 # Visualize the confusion matrix
 
-cm_resampled = confusion_matrix(test_Y,predictions_resampled.round())
+cm_resampled = confusion_matrix(test_Y, predictions_resampled.round())
 print("Confusion Matrix - Random Forest")
 print(cm_resampled)
 
