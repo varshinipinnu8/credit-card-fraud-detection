@@ -282,7 +282,7 @@ random_forest_score_resampled = rf_resampled.score(test_X, test_Y) * 100
 
 # Visualize the confusion matrix
 
-cm_resampled = confusion_matrix(test_Y, y_predict.round())
+cm_resampled = confusion_matrix(test_Y,predictions_resampled.round())
 print("Confusion Matrix - Random Forest")
 print(cm_resampled)
 
